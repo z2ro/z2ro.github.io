@@ -1,5 +1,5 @@
 baseURL = 'https://z2ro.github.io/'
-languageCode = 'en-us'
+locale = 'en-us'
 title = 'itszero'
 theme = "hugo-blog-awesome"
 enableRobotsTXT = true
