@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Locale }}">
+{{- partial "head.html" . -}}
+<body class="paper-document">
+    <div class="paper-sheet">
+        <header class="paper-running-head">
+            <a href="{{ .Site.Home.RelPermalink }}" class="paper-running-link">{{ .Params.series | default "Field Guide" }}</a>
+            <span>{{ .Params.edition | default (.Date.Format "January 2006") }}</span>
+        </header>
+
+        <main class="paper-main" aria-label="Content">
+            <article>
+                <header class="paper-title-block">
+                    <div class="paper-kicker">TECHNICAL FIELD NOTE</div>
+                    <h1>{{ .Params.paper_title | default .Title }}</h1>
+                    {{ with .Params.subtitle }}
+                    <p class="paper-subtitle">{{ . }}</p>
+                    {{ end }}
+                    {{ with .Params.note }}
+                    <p class="paper-note">{{ . }}</p>
+                    {{ end }}
+                </header>
+
+                {{ with .Params.abstract }}
+                <section class="paper-abstract" aria-labelledby="paper-abstract-title">
+                    <h2 id="paper-abstract-title">ABSTRACT</h2>
+                    <div class="paper-abstract-copy">{{ . | markdownify }}</div>
+                </section>
+                {{ end }}
+
+                <div class="paper-content">
+                    {{ .Content }}
+                </div>
+
+                {{ with .Params.index_terms }}
+                <section class="paper-index-terms" aria-label="Index terms">
+                    <h2>INDEX TERMS</h2>
+                    <p>{{ delimit . ", " }}.</p>
+                </section>
+                {{ end }}
+            </article>
+        </main>
+
+        <footer class="paper-page-footer">
+            <span>JANUZ / ENGINEERING FIELD NOTE</span>
+            <span>{{ .Date.Format "2006" }}</span>
+        </footer>
+    </div>
+</body>
+</html>

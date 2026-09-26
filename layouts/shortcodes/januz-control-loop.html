@@ -1,0 +1,64 @@
+<figure class="paper-figure paper-control-loop">
+    <div class="paper-figure-heading">
+        <strong>JANUZ CONTROL LOOP</strong>
+        <span>GUARDED LOCAL EXECUTION</span>
+    </div>
+
+    <div class="paper-flow-grid">
+        <section class="paper-flow-card">
+            <h3>INPUT STATE</h3>
+            <span>REQUEST</span>
+            <span>CONTEXT</span>
+            <span>POLICY</span>
+        </section>
+
+        <section class="paper-flow-card">
+            <h3>CONTROL PLANE</h3>
+            <span>DECIDE</span>
+            <span>BOUND</span>
+            <span>DISPATCH</span>
+        </section>
+
+        <section class="paper-flow-card">
+            <h3>LOCAL WORK</h3>
+            <span>CODEX</span>
+            <span>GIT / DOCKER</span>
+            <span>BROWSER QA</span>
+        </section>
+
+        <section class="paper-flow-card">
+            <h3>EVIDENCE</h3>
+            <span>RESULT</span>
+            <span>ARTIFACTS</span>
+            <span>STATUS</span>
+        </section>
+    </div>
+
+    <div class="paper-flow-actions">
+        <div><strong>BUILD CONTEXT</strong><small>intent + constraints</small></div>
+        <b aria-hidden="true">→</b>
+        <div><strong>DISPATCH</strong><small>typed action</small></div>
+        <b aria-hidden="true">→</b>
+        <div><strong>EXECUTE</strong><small>restricted worker</small></div>
+        <b aria-hidden="true">→</b>
+        <div><strong>RETURN</strong><small>verifiable evidence</small></div>
+    </div>
+
+    <div class="paper-receipt">
+        <div class="paper-receipt-title">EXECUTION RECEIPT</div>
+        <div class="paper-receipt-fields">
+            <span>COMMAND ID</span>
+            <span>ACTION</span>
+            <span>STATUS</span>
+            <span>ARTIFACT</span>
+            <span>LATENCY</span>
+        </div>
+    </div>
+
+    <div class="paper-observe">
+        <strong>OBSERVE + REVIEW</strong>
+        <span>recovery / idempotency / logs / verified outcome</span>
+    </div>
+
+    <figcaption>Fig. 1. Januz mantém decisão e contexto no control plane enquanto executores locais preservam autoridade limitada e retornam evidência verificável.</figcaption>
+</figure>
