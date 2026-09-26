@@ -2,23 +2,6 @@
 title: "Januz — construindo um control plane local entre ChatGPT, WSL, Codex, Git, Docker e Browser QA"
 date: 2026-09-26T00:05:00-03:00
 draft: false
-layout: "paper"
-paper_title: "JANUZ"
-subtitle: "Construindo um control plane local entre ChatGPT, WSL, Codex, Git, Docker e Browser QA"
-series: "2026 Field Guide to Local AI Systems"
-edition: "September 2026"
-note: "Engineering field note baseado em uma implementação real de automação local."
-abstract: >-
-  Januz é um control plane local que conecta uma conversa no ChatGPT a executores restritos no computador. A arquitetura separa contexto e decisão de execução: a extensão identifica comandos estruturados, um broker em loopback faz o roteamento e workers específicos cuidam de Codex, Git, Docker e Browser QA. Este artigo descreve por que o sistema foi criado, quais partes funcionaram, onde a primeira arquitetura falhou e quais princípios de segurança, idempotência e observabilidade passaram a orientar a evolução do projeto.
-index_terms:
-  - control plane
-  - local AI
-  - Codex
-  - WSL
-  - Git
-  - Docker
-  - Playwright
-  - idempotência
 ---
 
 ## Visão geral
@@ -54,8 +37,6 @@ O projeto está em:
 [github.com/z2ro/januz](https://github.com/z2ro/januz)
 
 Na versão atual, broker e extensão estão alinhados em `0.2.4`, mantendo `bridge_protocol = 1`.
-
-{{< januz-control-loop >}}
 
 ---
 
@@ -387,7 +368,7 @@ Parte estava no Windows.
 
 Parte estava no WSL.
 
-Parte estava em `$HOME/bin`.
+Parte estava em `/home/zero/bin`.
 
 As units estavam em `/etc/systemd/system`.
 
