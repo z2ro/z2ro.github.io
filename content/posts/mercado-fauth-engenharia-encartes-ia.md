@@ -497,7 +497,10 @@ O primeiro resultado já reproduz corretamente a estrutura geral da referência,
 
 Essa diferença é exatamente o foco da fase atual.
 
-## O que funcionou
+## Sucessos
+
+Os principais sucessos do projeto até aqui não vieram apenas da geração do PNG, mas da capacidade de manter o fluxo previsível enquanto novas camadas foram adicionadas.
+
 
 ### Determinismo comercial
 
@@ -530,7 +533,10 @@ Isso permite testar direções visuais distintas sem duplicar a aplicação inte
 
 Providers fake permitem validar contracts, caching, fallbacks e integração sem depender de credenciais externas.
 
-## O que não funcionou de primeira
+## Falhas
+
+As falhas mais úteis foram as que mostraram onde uma arquitetura tecnicamente correta ainda não resolvia o problema de produto.
+
 
 ### Qualidade visual não emerge de arquitetura
 
@@ -579,7 +585,10 @@ Ele não consegue, sozinho, decidir se o preço deveria ter 12% mais presença o
 
 Por isso o golden reference passou a ser essencial.
 
-## Lições
+## Aprendizados
+
+O projeto deixou alguns aprendizados que já estão influenciando as próximas decisões de arquitetura e de produto.
+
 
 ### Use IA onde ambiguidade ajuda
 
